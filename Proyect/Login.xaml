@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect.Login">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="imagen3.jpg" Aspect="AspectFill"/>
+            <BoxView Color="Blue" Opacity="0.6"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="dato.png" WidthRequest="100" HeightRequest="100" Margin="0,58,0,30"/>
+
+                <StackLayout Grid.Row="1" Padding="40,30">
+                   
+                    <Entry x:Name="txtEmail" Placeholder="Corre eletrónico" PlaceholderColor="White"/>
+                    <Entry x:Name="txtpin" Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
+
+                    <Button Text="Iniciar sesion" x:Name="btnIniciar"  Clicked="btnIniciar_Clicked"  BackgroundColor="White" BorderRadius="20" TextColor="#ff0699" />
+                    
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="¿Recuperar Contraseña?" x:Name="txtcon" Clicked="txtcon_Clicked"  TextColor="Black" FontSize="40" BorderColor="Transparent"
+                BackgroundColor="Transparent"
+                Scale="0.5"/>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand"  FontAttributes="Bold" FontSize="18"/>
+                    </StackLayout>
+ 
+                </StackLayout>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
